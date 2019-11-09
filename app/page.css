@@ -7,7 +7,7 @@
 .page {
     display: flex;
     flex-grow: 1;
-    width: calc(100vw - 44px);
+    height: calc(100vh - 44px);
 }
 
 .groups {
