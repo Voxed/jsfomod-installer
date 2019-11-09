@@ -26,7 +26,7 @@ function validate() {
             if (checkedOptions.length !== options.length) success = false
         options.forEach(o => {
             if (o.getAttribute('data-type') === 'Required')
-                if (!checkedOptions.contains(o)) success = false
+                if (!checkedOptions.includes(o)) success = false
         })
     })
     document.querySelector('.next').disabled = !success
