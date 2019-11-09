@@ -1,0 +1,14 @@
+head
+    include default.pug
+    style
+        include installer.css
+    script.
+        const { ipcRenderer } = require('electron')
+        function start() {
+            ipcRenderer.send('next', [])
+        }
+body
+    .installer
+        .installerName= installer.getName()
+        .installerImage(style=`background-image: url("${installer.getImage()}")`)
+        button.installerButton(onclick='start()') Start Installation

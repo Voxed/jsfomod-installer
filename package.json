@@ -1,0 +1,15 @@
+{
+  "name": "jsfomod-installer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "electron ."
+  },
+  "author": "voxed",
+  "license": "ISC",
+  "dependencies": {
+    "jsfomod": "git+https://github.com/Voxed/jsfomod.git",
+    "pug": "^2.0.4"
+  }
+}

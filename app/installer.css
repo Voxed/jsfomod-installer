@@ -1,0 +1,24 @@
+.installer {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    padding: 50px;
+    box-sizing: border-box;
+}
+
+.installerName {
+    text-align: center;
+    font-size: 24;
+}
+
+.installerImage {
+    flex-grow: 1;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.installerButton {
+    width: 100%;
+    height: 50px;
+}

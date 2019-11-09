@@ -1,0 +1,33 @@
+head
+    include default.pug
+    style
+        include page.css
+    script
+        include page.js
+body
+    .layout
+        .page
+            .groups
+                - page.groups.forEach((group, gIndex) => {
+                    .group(data-index=gIndex data-type=group.type)
+                        .groupName=group.name
+                        ul
+                            - group.options.forEach((option, oIndex) => {
+                                - optImage = option.image === undefined ? '' : installer.getPath() + '/' + option.image
+                                li.option(data-index=oIndex data-image=(optImage) data-description=(option.description || '') data-type=(option.type || ''))
+                                    input(type='checkbox')
+                                    =option.name
+                            - })
+                - })
+            .optionInfo
+                .optionImage
+                .optionDescription 
+        .bar
+            - if(installer.hasNext())
+                button.next(style="float:right" onclick="next()" disabled) Next
+            - else
+                button.next(style="float:right" onclick="next()" disabled) Finish
+            - if(installer.hasPrevious())
+                button(onclick="previous()") Previous
+            - else
+                button(disabled) Previous
