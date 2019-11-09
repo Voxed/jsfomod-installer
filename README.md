@@ -1,5 +1,5 @@
 
-# jsfomod
+# jsfomod-installer
 
 *A fomod installer for Electron*
 
