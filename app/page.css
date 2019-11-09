@@ -63,7 +63,7 @@
 }
 
 .optionDescription {
-    width: calc(100vw - 300px);
+    width: calc(100vw - 340px);
     padding: 20px;
     box-sizing: border-box;
 }
