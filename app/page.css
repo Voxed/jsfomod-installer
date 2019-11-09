@@ -7,11 +7,12 @@
 .page {
     display: flex;
     flex-grow: 1;
+    width: calc(100vw - 44px);
 }
 
 .groups {
     padding: 20px;
-    min-width: 200px;
+    width: 300px;
     overflow: auto;
 }
 
@@ -50,6 +51,7 @@
     padding-bottom: 44px;
     margin-bottom: -44px;
     box-shadow: inset 20px 0 20px -20px rgba(0,0,0,0.2);
+    overflow: hidden;
 }
 
 .optionImage {
@@ -61,7 +63,9 @@
 }
 
 .optionDescription {
-    padding: 20px;
+    width: calc(100vw - 300px);
+    margin: 20px;
+    box-sizing: border-box;
 }
 
 .bar {
