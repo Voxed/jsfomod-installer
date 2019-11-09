@@ -26,7 +26,7 @@ function openInstaller(path) {
         })
     
         win.webContents.loadURL('data:text/html;charset=UTF-8,' + encodeURIComponent(
-            pug.renderFile('app/installer.pug', locals)
+            pug.renderFile(`${__dirname}/app/installer.pug`, locals)
         ))
 
         ipcMain.on('next', (event, arg) => {
@@ -36,7 +36,7 @@ function openInstaller(path) {
             locals.page = installer.next(selected)
             if (locals.page !== undefined)
                 win.webContents.loadURL('data:text/html;charset=UTF-8,' + encodeURIComponent(
-                    pug.renderFile('app/page.pug', locals)
+                    pug.renderFile(`${__dirname}/app/page.pug`, locals)
                 ))
             else {
                 win.close()
@@ -49,7 +49,7 @@ function openInstaller(path) {
                 return
             locals.page = installer.previous()
             win.webContents.loadURL('data:text/html;charset=UTF-8,' + encodeURIComponent(
-                pug.renderFile('app/page.pug', locals)
+                pug.renderFile(`${__dirname}/app/page.pug`, locals)
             ))
         })
 
